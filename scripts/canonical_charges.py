@@ -1,7 +1,7 @@
 import os
 import sys
 import time
-
+#Define path to Openeye and OE_LICENSE
 from openeye import oechem
 from openeye import oeomega
 from openeye import oequacpac
