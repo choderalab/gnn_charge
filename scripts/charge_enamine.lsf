@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+#BSUB -R "rusage[mem=1]"
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+#BSUB -q cpuqueue
+#BSUB -W 2:00
+#BSUB -o %J.stdout
+#BSUB -eo %J.stderr
+
+# set-up
+cd $LS_SUBCWD
+source ~/.bashrc
+conda activate gnn
+
+# double check
+which python
+
+# job parameters
+INFILE="/home/fassj/enamine/2020q1-2_Enamine_REAL_reagents_124,180_sdf.sdf"
+OUTFILE="/home/fassj/gnn_charge/output.mol2"
+NJOBS=100
+let JOBID=$LSB_JOBINDEX-1
+
+# run script
+python canonical_charges.py $INFILE $OUTFILE $NJOBS $JOBID
