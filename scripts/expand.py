@@ -23,7 +23,7 @@ for mol in tqdm(mols):
 expanded_smiles = [mol.to_smiles() for mol in expanded_set]
 
 print('originals', len(mols))
-print('expanded', sum(list(map(len, expanded_set))))
+print('expanded', len(expanded_set))
 
 # check unique
 unique = set(expanded_smiles)
