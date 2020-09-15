@@ -33,4 +33,4 @@ n_unique = len(unique)
 in_thousands = int(round(n_unique / 1000))
 
 with open(f'../data/Enamine_Discovery_10K_expanded_{in_thousands}K.smi', 'w') as f:
-    f.writelines(list(unique))
+    f.write('\n'.join(list(unique)))
