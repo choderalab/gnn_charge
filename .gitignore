@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# PyCharm
+.idea
+
+# Datasets
+data/Enamine_Discovery_Diversity_Set_10_plated.zip
+data/Enamine_Discovery_Diversity_Set_50_plated.zip
